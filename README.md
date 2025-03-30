@@ -123,3 +123,8 @@ Additionally, for multi-GPU setups, comment out the line:
 from memonger import SublinearSequential
 ```
 and replace SublinearSequential with nn.Sequential in SEF_PNet_pse.py to avoid memory issues.
+
+### Create SCP
+The SCP file I provided is from [DPCCN](https://github.com/jyhan03/icassp22-dataset/tree/main/lst/libri2mix). It only uses the first speaker as the target. To match MC-Spex results for the 2-speaker condition in Libri2Mix, you'll need to use double the data, with two speakers taking turns as the target. This means you’ll need to recreate the SCP files for training, validation, and testing. You can use the script in the link for reference.
+
+Any problems, contact me at hzlkycg111@163.com, and a reply will be given promptly.
